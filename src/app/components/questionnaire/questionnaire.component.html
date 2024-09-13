@@ -1,0 +1,10 @@
+<div *ngIf="currentQuestion">
+  <h2>{{ currentQuestion.question }}</h2>
+  <div class="center" *ngFor="let option of currentQuestion.options">
+    <button (click)="onSelectOption(option)">{{ option.text }}</button>
+  </div>
+</div>
+
+<div *ngIf="!currentQuestion && !isFinished">
+  <p>No question available.</p>
+</div>

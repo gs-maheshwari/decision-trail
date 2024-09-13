@@ -1,0 +1,26 @@
+<ngx-graph
+  class="chart-container"
+  [links]="links"
+  [nodes]="nodes"
+  [layoutSettings]="layoutSettings"
+>
+  <ng-template #nodeTemplate class="node" let-node>
+    <svg:g>
+      <svg:rect
+        [attr.width]="node.dimension.width"
+        [attr.height]="node.dimension.height"
+        [attr.fill]="node.data.color"
+        [attr.class]="node.data.class"
+      />
+      <svg:text
+        alignment-baseline="central"
+        [attr.x]="10"
+        [attr.y]="node.dimension.height / 2"
+      >
+        {{ node.label }}
+      </svg:text>
+    </svg:g>
+  </ng-template>
+</ngx-graph>
+
+<button (click)="onRestart()" class="btnRestart">Restart</button>

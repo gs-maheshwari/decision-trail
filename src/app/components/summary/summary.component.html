@@ -1,0 +1,20 @@
+<div class="summary-container">
+  <h2>Your Journey</h2>
+  <ul>
+    <li *ngFor="let choice of choices">
+      {{ getQuestionText(choice.questionId) }} -
+      <strong>{{ getOptionText(choice) }}</strong>
+    </li>
+  </ul>
+
+  <div *ngIf="finalDestination">
+    <h3>Your Destination:</h3>
+    <p>{{ finalDestination.name }}</p>
+  </div>
+  <div *ngIf="!finalDestination">
+    <p>No matching destination found.</p>
+  </div>
+
+  <button (click)="onRestart()">Restart</button>
+  <button [routerLink]="['/decision-tree']">View Decision Tree</button>
+</div>

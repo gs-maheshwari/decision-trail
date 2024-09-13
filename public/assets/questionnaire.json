@@ -1,0 +1,113 @@
+{
+  "questions": [
+    {
+      "id": "A",
+      "question": "Do you want to go on holidays?",
+      "options": [
+        { "id": "A1", "text": "Yes", "nextChoiceId": "destination" },
+        { "id": "A2", "text": "No", "nextChoiceId": null }
+      ]
+    },
+    {
+      "id": "destination",
+      "question": "Select the type of destination?",
+      "options": [
+        { "id": "B1", "text": "Beach", "nextChoiceId": "budget" },
+        { "id": "B2", "text": "Mountains", "nextChoiceId": "budget" },
+        { "id": "B3", "text": "City", "nextChoiceId": "budget" }
+      ]
+    },
+    {
+      "id": "budget",
+      "question": "What is your budget range?",
+      "options": [
+        { "id": "C1", "text": "Economy (Less than $1000)", "nextChoiceId": "accommodation" },
+        { "id": "C2", "text": "Mid-range ($1000 - $3000)", "nextChoiceId": "accommodation" },
+        { "id": "C3", "text": "Luxury (Above $3000)", "nextChoiceId": "accommodation" }
+      ]
+    },
+    {
+      "id": "accommodation",
+      "question": "Select the type of accommodation?",
+      "options": [
+        { "id": "D1", "text": "Hotel", "nextChoiceId": null },
+        { "id": "D2", "text": "Resort", "nextChoiceId": null },
+        { "id": "D3", "text": "Hostel", "nextChoiceId": null }
+      ]
+    }
+  ],
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Ibiza - Beach Party",
+      "filters": {
+        "destination": "B1",
+        "budget": "C1",
+        "accommodation": "D3"
+      }
+    },
+     {
+      "id": 2,
+      "name": "Canary - Beach Fun",
+      "filters": {
+        "destination": "B1",
+        "budget": "C2",
+        "accommodation": "D1"
+      }
+    },
+     {
+      "id": 3,
+      "name": "Maldives - Tropical Beach Paradise",
+      "filters": {
+        "destination": "B1",
+        "budget": "C3",
+        "accommodation": "D2"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Switzerland - Snowy Mountain Adventure",
+      "filters": {
+        "destination": "B2",
+        "budget": "C2",
+        "accommodation": "D1"
+      }
+    },
+    {
+      "id": 5,
+      "name": "New York City - The Urban Experience",
+      "filters": {
+        "destination": "B3",
+        "budget": "C2",
+        "accommodation": "D1"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Marrakech - City",
+      "filters": {
+        "destination": "B3",
+        "budget": "C2",
+        "accommodation": "D3"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Bali - Tropical Getaway",
+      "filters": {
+        "destination": "B1",
+        "budget": "C2",
+        "accommodation": "D3"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Nepal - Himalayan Trekking",
+      "filters": {
+        "destination": "B2",
+        "budget": "C2",
+        "accommodation": "D1"
+      }
+    }
+  ]
+}
