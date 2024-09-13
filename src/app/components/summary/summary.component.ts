@@ -58,41 +58,6 @@ export class SummaryComponent implements OnInit {
   }
 
   determineDestination(): void {
-    //let filters: DestinationFilters = {};
-
-    // this.choices.forEach((choice) => {
-    //   const question = this.questions.find((q) => q.id === choice.questionId);
-    //   if (question) {
-    //     const option = question.options.find(
-    //       (o) => o.id === choice.selectedOptionId
-    //     );
-    //     if (option) {
-    //       switch (question.id) {
-    //         case this.questions[0].id:
-    //           break;
-    //         case 'B':
-    //           filters.destination = option.text;
-    //           break;
-    //         case 'C':
-    //           filters.budget = option.text;
-    //           break;
-    //         case 'D':
-    //           filters.accommodation = option.text;
-    //           break;
-    //         default:
-    //           break;
-    //       }
-    //     }
-    //   }
-    // });
-
-    // this.finalDestination = this.destinations.find(
-    //   (dest) =>
-    //     dest.filters.destination === filters.destination &&
-    //     dest.filters.budget === filters.budget &&
-    //     dest.filters.accommodation === filters.accommodation
-    // );
-
     const choiceMap = new Map(
       this.choices.map((choice) => [choice.questionId, choice.selectedOptionId])
     );
